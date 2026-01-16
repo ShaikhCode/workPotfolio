@@ -1,53 +1,262 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>potfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Your Name — Frontend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================
+       GLOBAL STYLES
+    ====================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 3px;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+
+    /* =====================
+       HERO SECTION
+    ====================== */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.2);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4.5rem;
+      letter-spacing: 4px;
+    }
+
+    .hero-content h1 span {
+      color: #00bcd4;
+    }
+
+    .hero-content p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+
+    /* =====================
+       ABOUT
+    ====================== */
+    .about {
+      padding: 120px 12%;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.9;
+      color: #bbb;
+      font-size: 1.1rem;
+    }
+
+    /* =====================
+       PROJECTS
+    ====================== */
+    .projects {
+      padding: 120px 10%;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .project-card {
+      background: #111;
+      padding: 40px;
+      border-left: 4px solid #00bcd4;
+      transition: 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      background: #151515;
+    }
+
+    .project-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* =====================
+       SKILLS
+    ====================== */
+    .skills {
+      padding: 100px 10%;
+      background: #0f0f0f;
+      text-align: center;
+    }
+
+    .skills p {
+      font-size: 1.1rem;
+      color: #bbb;
+      letter-spacing: 1px;
+    }
+
+    /* =====================
+       CONTACT
+    ====================== */
+    .contact {
+      padding: 120px 10%;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    /* =====================
+       RESPONSIVE
+    ====================== */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="overlay"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/image.png" alt="Profile">
+    <div class="hero-content">
+      <h1>I BUILD <span>MODERN WEB</span><br>EXPERIENCES</h1>
+      <p>Frontend Developer · HTML · CSS · JavaScript</p>
+    </div>
+  </section>
 
-  <img src="img/image.png" class="hero-img" alt="Profile">
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>ABOUT ME</h2>
+    <p>
+      I am a frontend developer who creates clean, fast, and user-focused
+      interfaces. I love building modern web experiences that look bold,
+      feel smooth, and deliver real business value.
+    </p>
+  </section>
 
-  <div class="hero-content">
-    <h1>I BUILD EXPERIENCES</h1>
-    <h2>THAT DRIVE GROWTH</h2>
-    <p>Frontend Developer</p>
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section class="projects">
+    <h2>PROJECTS</h2>
 
-<section class="about">
-  <h2>ABOUT ME</h2>
-  <p>
-    I am a frontend developer focused on building clean,
-    user-friendly interfaces that help businesses grow.
-  </p>
-</section>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>High-conversion landing page built with HTML, CSS, and JavaScript.</p>
+      </div>
 
-<section class="projects">
-  <h2>PROJECTS</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Dark cinematic personal portfolio with animations and responsiveness.</p>
+      </div>
 
-  <div class="project-grid">
-    <div class="project-card">Project One</div>
-    <div class="project-card">Project Two</div>
-    <div class="project-card">Project Three</div>
-  </div>
-</section>
+      <div class="project-card">
+        <h3>Web App UI</h3>
+        <p>Modern UI design focused on usability and performance.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="skills">
-  <h2>SKILLS</h2>
-  <p>HTML · CSS · JavaScript · Git · Responsive Design</p>
-</section>
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>SKILLS</h2>
+    <p>HTML · CSS · JavaScript · Git · Responsive Design</p>
+  </section>
 
-<section class="contact">
-  <h2>CONTACT</h2>
-  <p>Email: yourname@email.com</p>
-</section>
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>CONTACT</h2>
+    <p>
+      <a href="mailto:yourname@email.com">yourname@email.com</a>
+    </p>
+  </section>
 
-<script src="script.js"></script>
+  <!-- JS -->
+  <script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
 </body>
-
 </html>
