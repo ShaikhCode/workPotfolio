@@ -3,107 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio - UX Designer</title>
+    <meta name="description" content="Creative UX Designer Portfolio - Designing for clarity, adoption, and impact">
+    <title>Your Name - UX Designer Portfolio</title>
+    
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>CREATIVE</h1>
-            <h2>UX Designer</h2>
-            <p>Designing clarity, adoption, and impact—from global platforms to award-winning products.</p>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">YOUR NAME</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="scroll-indicator"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle animate-fade-up">Hello, I am</p>
+            <h1 class="hero-title animate-fade-up">YOUR NAME</h1>
+            <h2 class="hero-headline animate-fade-up">A UX PROFESSIONAL</h2>
+            <p class="hero-description animate-fade-up">
+                Who designs for clarity, adoption, and impact—from global platforms to award-winning products.
+            </p>
+            <div class="hero-cta animate-fade-up">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="emoji">👋</span>
+                    </div>
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">YEP, THAT'S ME.</h2>
+                    <h3 class="section-subtitle">Right there.</h3>
+                    <p class="about-text">
+                        With over 25+ years of experience, I've transformed complex workflows into clean, 
+                        intuitive digital systems that users adopt and love. From Adobe Photoshop Elements 
+                        to enterprise platforms, I design solutions that turn noise into insight.
+                    </p>
+                    <p class="about-text">
+                        Whether in finance, cybersecurity, or global tech platforms—I create experiences 
+                        that don't just look good, they work brilliantly.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number">25+</h3>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">100+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title centered">What I Do Best</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Creating intuitive interfaces that users love to interact with.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Data Visualization</h3>
+                    <p>Transforming complex data into clear, actionable insights.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>User Research</h3>
+                    <p>Deep diving into user needs and behaviors to drive design decisions.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Prototyping</h3>
+                    <p>Rapid prototyping to test and validate design concepts.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Strategy</h3>
+                    <p>Aligning design with business goals for measurable impact.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Innovation</h3>
+                    <p>Pushing boundaries with cutting-edge design solutions.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2 class="section-title">What People Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Masterful</div>
-                <p class="testimonial-text">"An incredibly talented UX designer with a keen eye for detail and user-centered design. Their work consistently exceeds expectations."</p>
-                <div class="testimonial-author">Phil Clevenger</div>
-                <div class="testimonial-position">VP Product Experience, Docusign</div>
-            </div>
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title centered">What People Say</h2>
+            <p class="section-description">
+                Here's what industry leaders have to say about working with me.
+            </p>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">MASTERFUL</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "One of the most talented, nuanced and capable UX designers I have had 
+                        the pleasure of meeting. His work consistently exceeds expectations."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PC</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Phil Clevenger</h4>
+                            <p class="author-position">VP Product Experience, Docusign | Ex Adobe Sr. Director UX</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Innovative</div>
-                <p class="testimonial-text">"A perfect blend of art and technology. Always stays updated with upcoming trends and brings fresh, innovative approaches to every project."</p>
-                <div class="testimonial-author">Jayan K. Narayanan</div>
-                <div class="testimonial-position">Co-founder, Helveticans</div>
-            </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">INNOVATIVE</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "A perfect blend of art with technology, and passion with humility. 
+                        Always keeps updated with upcoming technologies and trends."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JK</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Jayan K. Narayanan</h4>
+                            <p class="author-position">Co-founder, Helveticans</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Proactive</div>
-                <p class="testimonial-text">"Flexible, open to ideas, and proactive in sharing new concepts. Delivers exceptional work under tight deadlines with creative thinking."</p>
-                <div class="testimonial-author">Adrian Ornik</div>
-                <div class="testimonial-position">Global Growth Leader, EY</div>
-            </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">PROACTIVE</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Flexible, open to ideas, and proactive in sharing new concepts. 
+                        Delivers exceptional work under tight deadlines."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AO</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Adrian Ornik</h4>
+                            <p class="author-position">Global Growth Leader at EY</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Dedicated</div>
-                <p class="testimonial-text">"Not just a designer, but an artist with extraordinary imagination. The desire to get it right, no matter the challenge, is truly remarkable."</p>
-                <div class="testimonial-author">Robert Smith</div>
-                <div class="testimonial-position">Editor in Chief, Digit</div>
-            </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">DEDICATED</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Not just a designer, but an artist. The desire to get it right, 
+                        no matter how long it took, is truly remarkable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Robert Sovereign-Smith</h4>
+                            <p class="author-position">Editor in Chief, Digit</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Versatile</div>
-                <p class="testimonial-text">"An astonishing combination of creativity and enthusiasm. The range, variety, and technique is simply outstanding."</p>
-                <div class="testimonial-author">Alok Anand</div>
-                <div class="testimonial-position">Marketing Director, Kramer Electronics</div>
-            </div>
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">VERSATILE</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "An astonishing combination of creativity and enthusiasm. 
+                        The range, variety and technique is simply outstanding."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AA</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Alok Anand</h4>
+                            <p class="author-position">Marketing Director, Kramer Electronics - APAC</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Inspiring</div>
-                <p class="testimonial-text">"A creative artist with keen eye for detail and amazingly positive attitude. Truly inspiring to work with across multiple organizations."</p>
-                <div class="testimonial-author">Vijay Ramachandran</div>
-                <div class="testimonial-position">Ex. Editor-in-Chief, IDG</div>
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-badge">INSPIRING</div>
+                    </div>
+                    <p class="testimonial-text">
+                        "A creative artist with keen eye for detail and amazingly positive attitude. 
+                        Truly inspiring to work with."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VR</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Vijay Ramachandran</h4>
+                            <p class="author-position">Ex. Editor-in-Chief, IDG</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🎨</div>
-                <div class="project-content">
-                    <h3 class="project-title">Adobe Photoshop Elements</h3>
-                    <p class="testimonial-text">Streamlined complex editing workflows, enhancing usability and user satisfaction across the platform.</p>
-                    <div class="project-tags">
-                        <span class="tag">UX Design</span>
-                        <span class="tag">UI Design</span>
-                        <span class="tag">User Research</span>
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title centered">Featured Work</h2>
+            <p class="section-description">
+                A selection of projects that showcase my approach to solving complex UX challenges.
+            </p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">ADOBE</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span class="project-emoji">🎨</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Photoshop Elements</h3>
+                        <h4 class="project-subtitle">STREAMLINED</h4>
+                        <p class="project-description">
+                            Streamlined complex editing workflows, enhancing usability and user satisfaction. 
+                            Delivered measurable improvements in efficiency and user delight.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UX Design</span>
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Workflow Optimization</span>
+                            <span class="tag">User Research</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">📊</div>
-                <div class="project-content">
-                    <h3 class="project-title">EY Business Accelerator</h3>
-                    <p class="testimonial-text">Transformed strategic navigator into a data-driven tool empowering business leaders to make faster decisions.</p>
-                    <div class="project-tags">
-                        <span class="tag">Dashboard Design</span>
-                        <span class="tag">Data Visualization</span>
-                        <span class="tag">Enterprise UX</span>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">EY</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span class="project-emoji">📊</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Business Accelerator</h3>
+                        <h4 class="project-subtitle">ACCELERATED</h4>
+                        <p class="project-description">
+                            Transformed EY Strategic Navigator into a data-driven tool, empowering business 
+                            leaders to make faster, smarter decisions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Dashboard Design</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Enterprise UX</span>
+                            <span class="tag">Strategy</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">🔒</div>
-                <div class="project-content">
-                    <h3 class="project-title">Kerala Police Cyberdome</h3>
-                    <p class="testimonial-text">Created intuitive, secure UX for law enforcement, enabling faster and more accurate decisions in critical situations.</p>
-                    <div class="project-tags">
-                        <span class="tag">Security UX</span>
-                        <span class="tag">Data Visualization</span>
-                        <span class="tag">Critical Systems</span>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">KERALA POLICE</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span class="project-emoji">🔒</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Grapnel</h3>
+                        <h4 class="project-subtitle">ENHANCED</h4>
+                        <p class="project-description">
+                            Created an intuitive, secure UX for Grapnel, enabling law enforcement 
+                            to make faster, more accurate decisions in critical situations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Security UX</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Critical Systems</span>
+                            <span class="tag">Operational Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">UAE HACKATHON</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <span class="project-emoji">🏆</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Beauty Tech</h3>
+                        <h4 class="project-subtitle">CHAMPIONED</h4>
+                        <p class="project-description">
+                            Led a team to victory with cutting-edge UX and AI solutions, 
+                            setting new standards for digital experiences in beauty tech.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AI Integration</span>
+                            <span class="tag">Mobile UX</span>
+                            <span class="tag">Innovation</span>
+                            <span class="tag">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">ADOBE</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <span class="project-emoji">📱</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Photoshop Express</h3>
+                        <h4 class="project-subtitle">REVAMPED</h4>
+                        <p class="project-description">
+                            Revamped mobile editing experience, setting new benchmarks in 
+                            usability and interaction design for mobile platforms.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile UX</span>
+                            <span class="tag">Interaction Design</span>
+                            <span class="tag">User Engagement</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="project-category">IDG</h3>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                            <span class="project-emoji">💿</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PC World DVD Magazine</h3>
+                        <h4 class="project-subtitle">CRAFTED</h4>
+                        <p class="project-description">
+                            Designed a seamless interactive DVD experience, making complex 
+                            tech content accessible and engaging for millions of users.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Digital Publishing</span>
+                            <span class="tag">Interactive Media</span>
+                            <span class="tag">Content Strategy</span>
+                            <span class="tag">User Engagement</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,27 +428,96 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-section">
-            <h2 class="section-title">Let's Create Something Amazing</h2>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
-                If you need UX that turns complexity into clarity and ideas into measurable growth, this is where the next chapter starts.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:hello@example.com" class="contact-btn">Email Me</a>
-                <a href="#" class="contact-btn">LinkedIn</a>
-                <a href="#" class="contact-btn">Instagram</a>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2 class="section-title">Let's Start a Conversation</h2>
+                    <p class="contact-tagline">
+                        If you need UX that turns complexity into clarity and ideas into 
+                        measurable growth—this is where the next chapter starts.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:youremail@gmail.com">youremail@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <a href="#" target="_blank">Connect with me</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📸</span>
+                            <div>
+                                <h3>Instagram</h3>
+                                <a href="#" target="_blank">Follow the journey</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta">
+                        <a href="mailto:youremail@gmail.com" class="btn btn-primary">Send a Message</a>
+                        <a href="#" class="btn btn-secondary" download>Download Resume</a>
+                    </div>
+                </div>
+
+                <div class="contact-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Portfolio Clone. Created for practice purposes.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">No templates were harmed in the making of this portfolio.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>YOUR NAME</h3>
+                    <p>UX Designer crafting experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+                <p class="footer-disclaimer">
+                    No templates were harmed in the making of this portfolio.
+                </p>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/testimonials.js"></script>
 </body>
 </html>
