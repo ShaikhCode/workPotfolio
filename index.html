@@ -1,592 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alok Srivastav - Autonomous Systems Engineer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      line-height: 1.6;
-      color: #fff;
-      overflow-x: hidden;
-      background: #000;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-60px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(60px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow: 0 0 20px #ff3333, 0 0 30px #ff3333, 0 0 40px #ff3333;
-      }
-      50% {
-        text-shadow: 0 0 30px #ff3333, 0 0 40px #ff3333, 0 0 60px #ff3333;
-      }
-    }
-
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    @keyframes scaleIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes borderGlow {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(255, 51, 51, 0.5), inset 0 0 20px rgba(255, 51, 51, 0.1);
-      }
-      50% {
-        box-shadow: 0 0 40px rgba(255, 51, 51, 0.8), inset 0 0 30px rgba(255, 51, 51, 0.2);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.6;
-      }
-    }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Parallax sections */
-    .parallax {
-      min-height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
-      position: relative;
-    }
-
-    .parallax::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .parallax > div {
-      position: relative;
-      z-index: 2;
-      animation: fadeInUp 1.2s ease-out;
-    }
-
-    .name {
-      font-size: 5rem;
-      margin-bottom: 15px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      background: linear-gradient(135deg, #ff3333, #ff6b6b, #cc0000);
-      background-size: 300% 300%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientShift 4s ease infinite;
-      text-transform: uppercase;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      color: #aaa;
-      margin-bottom: 25px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      animation: fadeInUp 1.5s ease-out;
-    }
-
-    .tagline span {
-      color: #ff3333;
-      font-weight: 600;
-    }
-
-    .hero-statement {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin: 30px 0;
-      line-height: 1.3;
-      max-width: 1000px;
-      animation: fadeInUp 1.8s ease-out;
-      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.9);
-    }
-
-    .edge-tag {
-      display: inline-block;
-      font-size: 0.9rem;
-      letter-spacing: 4px;
-      padding: 8px 25px;
-      border: 2px solid #ff3333;
-      border-radius: 3px;
-      margin-bottom: 20px;
-      animation: pulse 2s ease-in-out infinite;
-      font-weight: 600;
-      color: #ff3333;
-    }
-
-    .manifesto {
-      font-size: 1.6rem;
-      font-style: italic;
-      margin-top: 35px;
-      color: #ddd;
-      animation: fadeInUp 2.1s ease-out;
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
-
-    .manifesto strong {
-      color: #ff3333;
-      font-weight: 600;
-    }
-
-    /* Profile Image Section */
-    .profile-section {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
-      padding: 100px 10%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 51, 51, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: float 20s linear infinite;
-      pointer-events: none;
-    }
-
-    .profile-container {
-      position: relative;
-      animation: scaleIn 1.2s ease-out;
-    }
-
-    .profile-frame {
-      position: relative;
-      width: 350px;
-      height: 350px;
-      margin: 0 auto;
-    }
-
-    .profile-frame::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      background: linear-gradient(45deg, #ff3333, #ff6b6b, #cc0000, #ff3333);
-      background-size: 400% 400%;
-      border-radius: 50%;
-      animation: gradientShift 4s ease infinite;
-      z-index: -1;
-    }
-
-    .profile-frame::after {
-      content: '';
-      position: absolute;
-      top: -15px;
-      left: -15px;
-      right: -15px;
-      bottom: -15px;
-      background: linear-gradient(45deg, transparent, rgba(255, 51, 51, 0.3), transparent);
-      border-radius: 50%;
-      animation: rotate 6s linear infinite;
-      z-index: -2;
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #000;
-      box-shadow: 0 0 40px rgba(255, 51, 51, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.4s ease;
-    }
-
-    .profile-img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Content sections */
-    .content {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
-      padding: 100px 10%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .content::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 51, 51, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: float 20s linear infinite;
-      pointer-events: none;
-    }
-
-    .content h2 {
-      font-size: 3rem;
-      margin-bottom: 30px;
-      background: linear-gradient(135deg, #ff3333, #ff6b6b);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
-      display: inline-block;
-      animation: slideInLeft 1s ease-out;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .content h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 120px;
-      height: 4px;
-      background: linear-gradient(90deg, #ff3333, transparent);
-      border-radius: 2px;
-    }
-
-    .content p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #ddd;
-      line-height: 1.9;
-      animation: fadeInUp 1.2s ease-out;
-      max-width: 900px;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .skill-box {
-      background: linear-gradient(135deg, #1c1c1c, #2a1a1a);
-      padding: 35px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-      border: 2px solid rgba(255, 51, 51, 0.3);
-      transition: all 0.4s ease;
-      animation: scaleIn 0.8s ease-out;
-      animation-fill-mode: both;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-box::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255, 51, 51, 0.15), transparent);
-      transform: rotate(45deg);
-      transition: all 0.6s ease;
-    }
-
-    .skill-box:hover::before {
-      transform: rotate(45deg) translate(50%, 50%);
-    }
-
-    .skill-box:nth-child(1) { animation-delay: 0.1s; }
-    .skill-box:nth-child(2) { animation-delay: 0.2s; }
-    .skill-box:nth-child(3) { animation-delay: 0.3s; }
-
-    .skill-box:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 20px 60px rgba(255, 51, 51, 0.5);
-      border-color: #ff3333;
-      animation: borderGlow 2s ease-in-out infinite;
-    }
-
-    .skill-box span {
-      font-size: 1.4rem;
-      font-weight: 700;
-      position: relative;
-      z-index: 1;
-      display: block;
-      background: linear-gradient(135deg, #fff, #ff6b6b);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 30px;
-      color: #aaa;
-      border-top: 1px solid rgba(255, 51, 51, 0.2);
-    }
-
-    footer p {
-      animation: fadeInUp 1s ease-out;
-    }
-
-    /* Background images */
-    #hero {
-      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920');
-    }
-
-    #projects {
-      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1920');
-    }
-
-    #contact {
-      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url('https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1920');
-    }
-
-    .highlight {
-      color: #ff3333;
-      font-weight: 700;
-      animation: glow 2s ease-in-out infinite;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 15px 40px;
-      background: transparent;
-      border: 2px solid #ff3333;
-      color: #ff3333;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-top: 25px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      text-decoration: none;
-      border-radius: 3px;
-    }
-
-    .contact-btn:hover {
-      background: #ff3333;
-      color: #000;
-      transform: scale(1.1);
-      box-shadow: 0 10px 40px rgba(255, 51, 51, 0.6);
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .parallax {
-        background-attachment: scroll;
-      }
-
-      .name {
-        font-size: 2.5rem;
-      }
-
-      .tagline {
-        font-size: 1rem;
-      }
-
-      .hero-statement {
-        font-size: 1.6rem;
-      }
-
-      .content h2 {
-        font-size: 2rem;
-      }
-
-      .content p {
-        font-size: 1rem;
-      }
-
-      .skills {
-        grid-template-columns: 1fr;
-      }
-
-      .manifesto {
-        font-size: 1.2rem;
-      }
-
-      .profile-frame {
-        width: 250px;
-        height: 250px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - UX Designer</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CREATIVE</h1>
+            <h2>UX Designer</h2>
+            <p>Designing clarity, adoption, and impact—from global platforms to award-winning products.</p>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
 
-  <!-- Hero Section -->
-  <section id="hero" class="parallax">
-    <div>
-      <div class="edge-tag">FOR THE EDGE</div>
-      <h1 class="name">Alok Srivastav</h1>
-      <p class="tagline"><span>Autonomous Systems</span> | <span>Aerospace</span> | <span>Defense</span></p>
-      <div class="hero-statement">I DESIGN SYSTEMS THAT DECIDE<br/>WHEN HUMANS CAN'T</div>
-      <p class="manifesto">Machines don't fail under pressure. <strong>Bad design does.</strong></p>
-    </div>
-  </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">What People Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Masterful</div>
+                <p class="testimonial-text">"An incredibly talented UX designer with a keen eye for detail and user-centered design. Their work consistently exceeds expectations."</p>
+                <div class="testimonial-author">Phil Clevenger</div>
+                <div class="testimonial-position">VP Product Experience, Docusign</div>
+            </div>
 
-  <!-- Profile Image Section -->
-  <section class="profile-section">
-    <div class="profile-container">
-      <div class="profile-frame">
-        <img src="img/image.png" alt="Alok Srivastav" class="profile-img">
-      </div>
-    </div>
-  </section>
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Innovative</div>
+                <p class="testimonial-text">"A perfect blend of art and technology. Always stays updated with upcoming trends and brings fresh, innovative approaches to every project."</p>
+                <div class="testimonial-author">Jayan K. Narayanan</div>
+                <div class="testimonial-position">Co-founder, Helveticans</div>
+            </div>
 
-  <!-- About Section -->
-  <section class="content">
-    <h2>Mission</h2>
-    <p>
-      Engineering <span class="highlight">autonomous systems</span> that operate at the edge of possibility—where split-second decisions mean the difference between mission success and catastrophic failure.
-    </p>
-    <p>
-      In aerospace and defense, there's no room for error. Systems must be resilient, adaptive, and absolute in their reliability when operating beyond human limits.
-    </p>
-  </section>
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Proactive</div>
+                <p class="testimonial-text">"Flexible, open to ideas, and proactive in sharing new concepts. Delivers exceptional work under tight deadlines with creative thinking."</p>
+                <div class="testimonial-author">Adrian Ornik</div>
+                <div class="testimonial-position">Global Growth Leader, EY</div>
+            </div>
 
-  <!-- Projects Parallax -->
-  <section id="projects" class="parallax">
-    <div>
-      <h1 class="hero-statement" style="font-size: 3.5rem;">Built for the Extreme</h1>
-      <p class="tagline" style="margin-top: 20px;">Systems that don't compromise</p>
-    </div>
-  </section>
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Dedicated</div>
+                <p class="testimonial-text">"Not just a designer, but an artist with extraordinary imagination. The desire to get it right, no matter the challenge, is truly remarkable."</p>
+                <div class="testimonial-author">Robert Smith</div>
+                <div class="testimonial-position">Editor in Chief, Digit</div>
+            </div>
 
-  <!-- Skills Section -->
-  <section class="content">
-    <h2>Core Expertise</h2>
-    <div class="skills">
-      <div class="skill-box">
-        <span>Autonomous Systems</span>
-      </div>
-      <div class="skill-box">
-        <span>Aerospace Engineering</span>
-      </div>
-      <div class="skill-box">
-        <span>Defense Systems</span>
-      </div>
-    </div>
-  </section>
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Versatile</div>
+                <p class="testimonial-text">"An astonishing combination of creativity and enthusiasm. The range, variety, and technique is simply outstanding."</p>
+                <div class="testimonial-author">Alok Anand</div>
+                <div class="testimonial-position">Marketing Director, Kramer Electronics</div>
+            </div>
 
-  <!-- Contact Parallax -->
-  <section id="contact" class="parallax">
-    <div>
-      <h1 class="hero-statement" style="font-size: 3rem;">Let's Build the Future</h1>
-      <p class="tagline" style="margin-top: 20px;">Systems that operate where humans cannot</p>
-      <a href="mailto:alok@email.com" class="contact-btn">Initiate Contact</a>
-    </div>
-  </section>
+            <div class="testimonial-card">
+                <div class="testimonial-badge">Inspiring</div>
+                <p class="testimonial-text">"A creative artist with keen eye for detail and amazingly positive attitude. Truly inspiring to work with across multiple organizations."</p>
+                <div class="testimonial-author">Vijay Ramachandran</div>
+                <div class="testimonial-position">Ex. Editor-in-Chief, IDG</div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>©️ 2026 Alok Srivastav | <span class="highlight">Engineered for Excellence</span></p>
-  </footer>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3 class="project-title">Adobe Photoshop Elements</h3>
+                    <p class="testimonial-text">Streamlined complex editing workflows, enhancing usability and user satisfaction across the platform.</p>
+                    <div class="project-tags">
+                        <span class="tag">UX Design</span>
+                        <span class="tag">UI Design</span>
+                        <span class="tag">User Research</span>
+                    </div>
+                </div>
+            </div>
 
+            <div class="project-card">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3 class="project-title">EY Business Accelerator</h3>
+                    <p class="testimonial-text">Transformed strategic navigator into a data-driven tool empowering business leaders to make faster decisions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Dashboard Design</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Enterprise UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🔒</div>
+                <div class="project-content">
+                    <h3 class="project-title">Kerala Police Cyberdome</h3>
+                    <p class="testimonial-text">Created intuitive, secure UX for law enforcement, enabling faster and more accurate decisions in critical situations.</p>
+                    <div class="project-tags">
+                        <span class="tag">Security UX</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Critical Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-section">
+            <h2 class="section-title">Let's Create Something Amazing</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                If you need UX that turns complexity into clarity and ideas into measurable growth, this is where the next chapter starts.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:hello@example.com" class="contact-btn">Email Me</a>
+                <a href="#" class="contact-btn">LinkedIn</a>
+                <a href="#" class="contact-btn">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Portfolio Clone. Created for practice purposes.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">No templates were harmed in the making of this portfolio.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
